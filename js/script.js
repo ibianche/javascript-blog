@@ -75,18 +75,20 @@
     /* for each article */
     const articles = document.querySelectorAll(optArticleSelector);
     let html = '';
+
     for (let article of articles) {
-      document.querySelector(optArticleSelector);
+      // document.querySelector(optArticleSelector);
+
     }
 
 
     /* get the article id */
-    const articleId = articles.getAttribute('id');
+    const articleId = articles.getAttribute(articles);
     console.log(articleId);
 
 
     /* find the title element */
-    document.querySelectorAll('optTitleListSelector');
+    // document.querySelectorAll('optTitleListSelector');
 
 
     /* get the title from the title element */
@@ -99,14 +101,14 @@
 
 
     /* insert link into titleList */
-    titleList.insertAdjacentHTML('beforebegin');
+    // titleList.insertAdjacentHTML('beforebegin');
     html = html + linkHTML;
+    titleList.innerHTML = html;
   }
+}
 
-  titleList.innerHTML = html;
-
-  generateTitleLinks();
-
+// titleList.innerHTML = html;
+generateTitleLinks();
 
 }
 
