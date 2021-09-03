@@ -51,12 +51,12 @@
   }
 
 
-  const links = document.querySelectorAll('.titles a');
-  console.log(links);
+  // const links = document.querySelectorAll('.titles a');
+  // console.log(links);
 
-  for (let link of links) {
-    link.addEventListener('click', titleClickHandler);
-  }
+  // for (let link of links) {
+  //   link.addEventListener('click', titleClickHandler);
+  // }
 
 
   /* ***************************************zadanie 2*******************************************/
@@ -105,6 +105,9 @@
     }
 
     titleList.innerHTML = html;
+
+    const links = document.querySelectorAll('.titles a');
+    console.log(links);
 
     for (let link of links) {
       link.addEventListener('click', titleClickHandler);
