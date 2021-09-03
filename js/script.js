@@ -52,6 +52,7 @@
 
 
   const links = document.querySelectorAll('.titles a');
+  console.log(links);
 
   for (let link of links) {
     link.addEventListener('click', titleClickHandler);
@@ -90,7 +91,7 @@
 
 
       /* get the title from the title element */
-      const articleTitle = article.querySelector(optTitleListSelector).innerHTML; /*95*/
+      const articleTitle = article.querySelector(optTitleSelector).innerHTML; /*95*/
 
 
       /* create HTML of the link */
@@ -100,13 +101,16 @@
 
       /* insert link into titleList */
       // titleList.insertAdjacentHTML('beforebegin');
+      html = html + linkHTML;
     }
-    html = html + linkHTML;
+
     titleList.innerHTML = html;
+
+    for (let link of links) {
+      link.addEventListener('click', titleClickHandler);
+    }
   }
 
-
-// titleList.innerHTML = html;
   generateTitleLinks();
 
 }
