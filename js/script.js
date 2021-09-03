@@ -36,7 +36,7 @@
 
 
     /* get 'href' attribute from the clicked link */
-    const articleSelector = clickedElement.getAttribute('href')
+    const articleSelector = clickedElement.getAttribute('href');
     console.log(articleSelector);
 
 
@@ -48,7 +48,7 @@
     /* add class 'active' to the correct article */
     targetArticle.classList.add('active');
 
-  }
+  };
 
 
   // const links = document.querySelectorAll('.titles a');
