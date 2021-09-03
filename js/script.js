@@ -79,36 +79,35 @@
     for (let article of articles) {
       // document.querySelector(optArticleSelector);
 
+
+      /* get the article id */
+      const articleId = article.getAttribute('id'); /*86*/
+      console.log(articleId);
+
+
+      /* find the title element */
+      // document.querySelectorAll('optTitleListSelector');
+
+
+      /* get the title from the title element */
+      const articleTitle = article.querySelector(optTitleListSelector).innerHTML; /*95*/
+
+
+      /* create HTML of the link */
+      const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
+      console.log(linkHTML);
+
+
+      /* insert link into titleList */
+      // titleList.insertAdjacentHTML('beforebegin');
     }
-
-
-    /* get the article id */
-    const articleId = articles.getAttribute(articles);
-    console.log(articleId);
-
-
-    /* find the title element */
-    // document.querySelectorAll('optTitleListSelector');
-
-
-    /* get the title from the title element */
-    const articleTitle = articles.querySelector(optTitleSelector).innerHTML;
-
-
-    /* create HTML of the link */
-    const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
-    console.log(linkHTML);
-
-
-    /* insert link into titleList */
-    // titleList.insertAdjacentHTML('beforebegin');
     html = html + linkHTML;
     titleList.innerHTML = html;
   }
-}
+
 
 // titleList.innerHTML = html;
-generateTitleLinks();
+  generateTitleLinks();
 
 }
 
