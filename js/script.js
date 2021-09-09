@@ -64,8 +64,9 @@
   const optArticleSelector = '.post',
     optTitleSelector = '.post-title',
     optTitleListSelector = '.titles';
+    optArticleTagsSelector = '.post-tags .list';
 
-  function generateTitleLinks() {
+  const generateTitleLinks = function() {
 
     /* remove contents of titleList */
     const titleList = document.querySelector(optTitleListSelector);
@@ -117,7 +118,61 @@
   generateTitleLinks();
 
 }
+/* *********************************************zadanie 3************************************************************ */
 
+function generateTags(){
+  /* find all articles */
+  const articles = document.querySelectorAll(optArticleTagsSelector);
+
+  /* START LOOP: for every article: */
+  for (let article of articles) {
+
+    /* find tags wrapper */
+    const titleList = article.querySelector(optArticleTagsSelector);
+    // titleList.innerHTML = '';
+    console.log(titleList);
+
+
+
+    /* make html variable with empty string */
+    let html = '';
+
+    /* get tags from data-tags attribute */
+    const articleTags = article.getAttribute('data-tags');
+    console.log(articleTags);
+
+
+    /* split tags into array */
+    const articleTagsArray = articleTags.split(' ');
+    console.log(articleTagsArray);
+
+
+    /* START LOOP: for each tag */
+    for(let tag of articleTagsArray) {
+      console.log(tag);
+
+      /* generate HTML of the link */
+      const linkHTML = '<li><a href="#' + "#tag-" + articleTags + '"><span>' + articleTitle + '</span></a></li>';
+
+
+      /* add generated code to html variable */
+      html = html + linkHTML;
+
+
+      /* END LOOP: for each tag */
+    }
+
+
+    /* insert HTML of all the links into the tags wrapper */
+    articleTags.insertAdjacentHTML('beforebegin', linkHTML);
+
+
+
+    /* END LOOP: for every article: */
+  }
+}
+
+generateTags();
 
 
 
