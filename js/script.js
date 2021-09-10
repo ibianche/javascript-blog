@@ -151,21 +151,15 @@
         console.log(tag);
 
         /* generate HTML of the link */
-        const linkHTML = '<li><a href="#' + 'tag-' + 'data-tags'" + '</a></li>';
-
+        const linkHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>';
 
         /* add generated code to html variable */
         html = html + linkHTML;
 
         /* insert HTML of all the links into the tags wrapper*/
-        titleList.insertAdjacentHTML(articleTags);
+        titleList.insertAdjacentHTML('beforeend', linkHTML);
         /* END LOOP: for each tag */
       }
-
-
-
-
-
       /* END LOOP: for every article: */
     }
   }
