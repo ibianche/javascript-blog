@@ -182,13 +182,13 @@ function tagClickHandler(event){
   const tag = href.replace('#tag-', '');
 
   /* find all tag links with class active */
-  const taglinks = document.querySelectorAll('.active');
+  const tagLinks = document.querySelectorAll('.active');
 
   /* START LOOP: for each active tag link */
-  for (let tag of taglinks) {
+  for (let tag of tagLinks) {
 
     /* remove class active */
-    taglinks.classList.remove('active');
+    tagLinks.classList.remove('active');
 
     /* END LOOP: for each active tag link */
   }
@@ -210,14 +210,19 @@ function tagClickHandler(event){
   generateTitleLinks('[data-tags~="' + tag + '"]');
 }
 
-function addClickListenersToTags(){
+function addClickListenersToTags() {
   /* find all links to tags */
+  const allLinks = document.querySelectorAll('href');
 
   /* START LOOP: for each link */
+  for (let link of allLinks) {
 
-  /* add tagClickHandler as event listener for that link */
+    /* add tagClickHandler as event listener for that link */
+    tagClickHandler.addEventListener('click', allLinks);
+    console.log('Link was clicked!');
 
-  /* END LOOP: for each link */
+    /* END LOOP: for each link */
+  }
 }
 
 addClickListenersToTags();
