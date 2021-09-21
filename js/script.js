@@ -182,7 +182,7 @@ function tagClickHandler(event){
   const tag = href.replace('#tag-', '');
 
   /* find all tag links with class active */
-  const tagLinks = document.querySelectorAll('.active');
+  const tagLinks = document.querySelectorAll( 'a.active[href^="#tag-"]');
 
   /* START LOOP: for each active tag link */
   for (let tag of tagLinks) {
@@ -212,7 +212,7 @@ function tagClickHandler(event){
 
 function addClickListenersToTags() {
   /* find all links to tags */
-  const allLinks = document.querySelectorAll('href');
+  const allLinks = document.querySelectorAll(tagLinks);
 
   /* START LOOP: for each link */
   for (let link of allLinks) {
