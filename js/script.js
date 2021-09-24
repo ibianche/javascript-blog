@@ -121,6 +121,11 @@ generateTitleLinks();
 
 /* *********************************************zadanie 3************************************************************ */
 
+function calculateTagsParams(tags) {
+
+
+}
+
 
 function generateTags() {
 
@@ -163,7 +168,7 @@ function generateTags() {
       html = html + linkHTML;
 
       /* [NEW] check if this link is NOT already in allTags */
-      if(!allTags[tag]) {
+      if (!allTags[tag]) {
         /* [NEW] add tag to allTags object */
         allTags[tag] = 1;
       } else {
@@ -193,16 +198,15 @@ function generateTags() {
   let allTagsHTML = '';
 
   /* [NEW] START LOOP: for each tag in allTags: */
-  for(let tag in allTags){
+  for (let tag in allTags) {
     /* [NEW] generate code of a link and add it to allTagsHTML */
     // allTagsHTML += tag + ' (' + allTags[tag] + ') ';
-    allTagsHTML += '<li><a href="tag + (' + allTags[tag] + ')">' + tag + (allTags[tag]) +'</a></li>';
+    allTagsHTML += '<li><a href="tag + (' + allTags[tag] + ')">' + tag + (allTags[tag]) + '</a></li>';
   }
   /* [NEW] END LOOP: for each tag in allTags: */
 
   /*[NEW] add HTML from allTagsHTML to tagList */
   tagList.innerHTML = allTagsHTML;
-
 
 
 }
