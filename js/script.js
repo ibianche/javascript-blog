@@ -188,20 +188,20 @@ function tagClickHandler(event) {
   for (let tag of tagLinks) {
 
     /* remove class active */
-    tagLinks.classList.remove('active');
+    tag.classList.remove('active');
 
     /* END LOOP: for each active tag link */
   }
 
   /* find all tag links with "href" attribute equal to the "href" constant */
-  const hreflinks = document.querySelectorAll(href);
+  const hreflinks = document.querySelectorAll('[href="' + href + '"]');
 
 
   /* START LOOP: for each found tag link */
   for (let tag of hreflinks) {
 
     /* add class active */
-    hreflinks.classList.add('active');
+    tag.classList.add('active');
 
     /* END LOOP: for each found tag link */
   }
@@ -227,7 +227,7 @@ function addClickListenersToTags() {
 
 addClickListenersToTags();
 
-/* *************************************************zadanie 4******************************************************** */
+/* *************************************************zadanie 7.2******************************************************** */
 
 
 function generateAuthors() {
@@ -291,20 +291,20 @@ function authorClickHandler(event) {
   for (let author of authorsLinks) {
 
     /* remove class active */
-    authorsLinks.classList.remove('active');
+    author.classList.remove('active');
 
     /* END LOOP: for each active tag link */
   }
 
   /* find all tag links with "href" attribute equal to the "href" constant */
-  const hreflinks = document.querySelectorAll(href);
+  const hreflinks = document.querySelectorAll('[href="' + href + '"]');
 
 
   /* START LOOP: for each found tag link */
   for (let author of hreflinks) {
 
     /* add class active */
-    hreflinks.classList.add('active');
+    author.classList.add('active');
 
     /* END LOOP: for each found tag link */
   }
@@ -333,3 +333,32 @@ function addClickListenersToAuthors() {
 }
 
 addClickListenersToAuthors();
+
+/* *****************************************zadanie 7.3************************************************************** */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
