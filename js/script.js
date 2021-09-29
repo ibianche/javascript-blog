@@ -151,6 +151,7 @@ function calculateTagClass(count, params) {
   const percentage = normalizedCount / normalizedMax;
   const classNumber = Math.floor( percentage * (optCloudClassCount - 1) + 1 );
 
+  return [optCloudClassPrefix, classNumber];
 }
 
 
