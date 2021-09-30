@@ -394,7 +394,7 @@ function generateAuthors() {
 // /* [NEW] START LOOP: for each tag in allTags: */
   for (let author in allAuthors) {
 //   /* [NEW] generate code of a link and add it to allTagsHTML */
-    const authorLinkHTML = '<li><a href="author + (' + allAuthors[author] + ')">' + author + (allAuthors[author]) + '</a></li>';
+    const authorLinkHTML = '<li><a href="#author-' + author + '">' + author + (allAuthors[author]) + '</a></li>';
     console.log('authorLinkHTML:', authorLinkHTML);
     allAuthorsHTML += authorLinkHTML;
 
