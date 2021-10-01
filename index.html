@@ -292,7 +292,8 @@
 <script id="template-tag-cloud-link" type="text/x-handlebars-template">
     {{#each tags}}
     <li>{{ tag }}</li>
-    <li><a class="{{ className }}"
+    <!--const tagLinkHTML = '<li><a class="' + calculateTagClass(allTags[tag], tagsParams) + '" href="#tag-' + tag + '">' + tag + '</a></li>';-->
+    <li><a class="{{ className }}" href="#tag- {{ tag }}" > {{ tag }}</a></li>
     {{/each}}
 </script>
 
