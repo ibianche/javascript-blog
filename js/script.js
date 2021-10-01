@@ -440,7 +440,7 @@ function generateAuthors() {
 //     console.log('authorLinkHTML:', authorLinkHTML);
     // allAuthorsHTML += authorLinkHTML;
     allAuthorsData.authors.push({
-      tag: author,
+      author: author ,
       count: allAuthors[author]
       // className: calculateAuthorClass(allAuthors[author])
     });
